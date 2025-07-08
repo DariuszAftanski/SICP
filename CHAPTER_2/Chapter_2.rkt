@@ -295,9 +295,12 @@ lowest terms before constructing the pair:
   ;                              |
   ; (lambda (f) (lambda (x) (f ((n f) x))))
   ; (lambda (f) (lambda (x) (f (((lambda (f) (lambda (x) x) f) x))))
-  ; HOW ?
-  ; (lambda (f) (lambda (x) (f (f x))))
+  ; (lambda (f) (lambda (x) (f x)))
+  ;
+  ; Hence:
+  (define one
+    (lambda (f) (lambda (x) (f x))))
+  (define two
+    (lambda (f) (lambda (x) (f (f x)))))
 )
-
-
 
