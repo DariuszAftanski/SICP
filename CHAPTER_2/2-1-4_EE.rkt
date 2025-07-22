@@ -232,16 +232,30 @@ constructor and alternate selectors:
 ; Exercise 2.13
 (display "Exercise 2.13:") (newline)
 
+; Exercise 2.14
+(define (par1 r1 r2)
+  (div-interval (mul-interval r1 r2)
+                (add-interval r1 r2)))
 
+(define (par2 r1 r2)
+  (let ((one (make-interval 1 1)))
+    (div-interval
+      one (add-interval (div-interval one r1)
+                        (div-interval one r2)))))
 
+(define R_1 (make-center-percent 10000 1))
+(define R_2 (make-center-percent 100 1))
 
+(par1 R_1 R_2)
+(par2 R_1 R_2)
 
+(div-interval-safe R_1 R_1)
+(div-interval-safe R_2 R_2)
 
+(mul-interval R_1 R_1)
+(mul-interval R_2 R_2)
 
-
-
-
-
+; The more "variables" are used the more tolerance error they produce.
 
 
 
