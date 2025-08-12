@@ -52,3 +52,7 @@ list (1 2 3 4 5 6).
 (display "Evaluate: (same-parity 2 3 4 5 6 7)   = ")
 (same-parity 2 3 4 5 6 7)
 
+; ERROR
+; THIS SOLUTION DOES NOT SOLVE THE PROBLEM
+; MISUNDERSTOOD THE EXERCISE
+
