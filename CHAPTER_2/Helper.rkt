@@ -11,6 +11,7 @@
   (* a a)
 )
 
+#|
 (define (count-leaves x)
   (cond
     ((null? x) 0)
@@ -20,3 +21,5 @@
     )
   )
 )
+|#
+
